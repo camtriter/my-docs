@@ -176,5 +176,6 @@ sequenceDiagram
     Note over Client: 循环渲染
     loop 每条数据
         Client->>Client: 渲染列表项
+        Client->>Server: 请求下一条数据
     end
 ```
