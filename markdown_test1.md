@@ -147,3 +147,34 @@ sequenceDiagram
     服务器->>浏览器: 返回HTML页面
     浏览器->>用户: 渲染页面
 ```
+
+
+
+
+## 高级用法的图表
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    participant DB
+
+    rect rgb(240, 240, 240)
+    Note over Client,Server: 认证阶段
+    Client->>Server: 发送用户名密码
+    Server-->>Client: 返回 Token
+    end
+
+    rect rgb(230, 245, 255)
+    Note over Client,DB: 业务阶段
+    Client->>+Server: 请求用户数据（带 Token）
+    Server->>+DB: 查询
+    DB-->>-Server: 返回结果
+    Server-->>-Client: 返回数据
+    end
+
+    Note over Client: 循环渲染
+    loop 每条数据
+        Client->>Client: 渲染列表项
+    end
+```
