@@ -92,3 +92,58 @@ graph TD
     C --> E[部署到服务器]
     E --> F[完成]
 ```
+
+
+## 段落内换行
+这是一个段落。
+这是一个段落。
+这是一个
+
+
+<https://www.baidu.com>
+
+
+```javascript
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+greet('World');
+```
+
+
+
+| 左对齐列 | 居中对齐列 | 右对齐列 |
+|:---------|:----------:|---------:|
+| 单元格1  | 单元格2    | 单元格3  |
+| 单元格4  | 单元格5    | 单元格6  |
+
+
+
+<details>
+<summary>点击展开查看详情</summary>
+
+这里面是折叠的内容，默认收起。
+
+- 第一点
+- 第二点
+- 第三点
+
+</details>
+
+
+$E = mc^2$ 
+
+```mermaid
+sequenceDiagram
+    participant 用户
+    participant 浏览器
+    participant 服务器
+    participant 数据库
+
+    用户->>浏览器: 访问页面
+    浏览器->>服务器: 发起HTTP请求
+    服务器->>数据库: 查询数据库
+    数据库->>服务器: 返回结果
+    服务器->>浏览器: 返回HTML页面
+    浏览器->>用户: 渲染页面
+```
